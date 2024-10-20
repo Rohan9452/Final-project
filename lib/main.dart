@@ -11,11 +11,15 @@ import 'feedback_page.dart';
 
 // demo change
 
+//hello rohan kale
+
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,6 +45,8 @@ class MyApp extends StatelessWidget {
 }
 
 class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,10 +54,10 @@ class FirstPage extends StatelessWidget {
         automaticallyImplyLeading: false, // Hide back button if needed
         backgroundColor: const Color.fromARGB(255, 176, 199, 238),
         toolbarHeight: 100, // Increase the height of the AppBar
-        flexibleSpace: Align(
+        flexibleSpace: const Align(
           alignment: Alignment.center,
           child: Padding(
-            padding: const EdgeInsets.only(top: 10.0), // Adjust the top padding
+            padding: EdgeInsets.only(top: 10.0), // Adjust the top padding
             child: Text(
               'Welcome',
               style: TextStyle(
@@ -68,45 +74,45 @@ class FirstPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton.icon(
-              icon: Icon(Icons.school, size: 30),
-              label: Text(
+              icon: const Icon(Icons.school, size: 30),
+              label: const Text(
                 'Student',
                 style: TextStyle(fontSize: 20),
               ),
               style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                padding: WidgetStateProperty.all(
+                  const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                 ),
-                shape: MaterialStateProperty.all(
+                shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                backgroundColor: MaterialStateProperty.all(Colors.greenAccent),
-                foregroundColor: MaterialStateProperty.all(Colors.white),
+                backgroundColor: WidgetStateProperty.all(Colors.greenAccent),
+                foregroundColor: WidgetStateProperty.all(Colors.white),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/login', arguments: 'Student');
               },
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             ElevatedButton.icon(
-              icon: Icon(Icons.person, size: 30),
-              label: Text(
+              icon: const Icon(Icons.person, size: 30),
+              label: const Text(
                 'Teacher/Others',
                 style: TextStyle(fontSize: 20),
               ),
               style: ButtonStyle(
-                padding: MaterialStateProperty.all(
-                  EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                padding: WidgetStateProperty.all(
+                  const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                 ),
-                shape: MaterialStateProperty.all(
+                shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                backgroundColor: MaterialStateProperty.all(Colors.orangeAccent),
-                foregroundColor: MaterialStateProperty.all(Colors.white),
+                backgroundColor: WidgetStateProperty.all(Colors.orangeAccent),
+                foregroundColor: WidgetStateProperty.all(Colors.white),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/login', arguments: 'Teacher');
